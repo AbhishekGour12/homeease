@@ -252,25 +252,11 @@ export default function Navbar() {
                           <span className="text-emerald-600">{item.icon}</span>
                           <span className="font-medium text-gray-700">{item.name}</span>
                         </div>
-                        {item.dropdown && <ChevronDown className="w-4 h-4 text-gray-400" />}
+                        {item.dropdown }
                       </Link>
                       
                       {/* Mobile Dropdown Items */}
-                      {item.dropdown && (
-                        <div className="ml-8 mt-1 space-y-1">
-                          {item.dropdownItems.map((dropItem, idx) => (
-                            <Link
-                              key={idx}
-                              href={dropItem.href}
-                              className="flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              <span className="text-lg">{dropItem.icon}</span>
-                              <span className="text-gray-600">{dropItem.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
+                     
                     </div>
                   ))}
                 </div>
